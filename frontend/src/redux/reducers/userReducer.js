@@ -1,3 +1,4 @@
+
 import {
   USER_SIGNIN_REQUEST,
   USER_SIGNIN_SUCCESS,
@@ -16,6 +17,8 @@ import {
   USER_LIST_FAIL,
   USER_LIST_RESET
 } from "../constants/userContants";
+
+import { USER_ADD_JOB_HISTORY } from '../constants/userContants';
 
 export const userListReducer = (state = { users: [] }, action) => {
   switch (action.type) {
@@ -56,8 +59,7 @@ export const userReducerSignIn = (state = {}, action) => {
   }
 };
 
-//User Profile
-import { USER_ADD_JOB_HISTORY } from '../constants/userContants';
+
 
 export const userReducerProfile = (state = {user: null}, action) => {
   switch (action.type) {
